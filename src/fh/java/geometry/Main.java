@@ -21,7 +21,8 @@ public class Main {
 
     }
 
-    private void doIt() {
+    private void doIt()
+    {
 
         List <GeometricShape> shapeList = new ArrayList<>();
 
@@ -29,8 +30,23 @@ public class Main {
 
         printList(shapeList);
 
+        List<Circle> circleList = new ArrayList<>();
+
+        for (GeometricShape shape : shapeList) {
+            if (shape instanceof Circle)
+            {
+                circleList.add((Circle)shape);
 
 
+            }
+        }
+
+        System.out.println("---------- only circles --------");
+        for (Circle circle : circleList)
+        {
+            System.out.println(circle);
+
+        }
 
     }
 
